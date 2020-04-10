@@ -1,5 +1,8 @@
 <template>
   <div class="navbar">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
     <breadcrumb class="breadcrumb-container" />
@@ -7,7 +10,8 @@
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
+          <span class="material-icons">account_circle</span>
+          <!-- <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar"> -->
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
@@ -28,6 +32,9 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
+    <!-- <div class="container">
+      <h3>Welcome</h3>
+    </div> -->
   </div>
 </template>
 
@@ -61,7 +68,8 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 50px;
+  width: 100%;
+  height: 80px;
   overflow: hidden;
   position: relative;
   background: #fff;
@@ -83,6 +91,12 @@ export default {
   .breadcrumb-container {
     float: left;
   }
+  .container{
+    width: 100%;
+    position: absolute;
+    height: 30px;
+    background-color: #106A8E;
+  }
 
   .right-menu {
     float: right;
@@ -98,7 +112,7 @@ export default {
       padding: 0 8px;
       height: 100%;
       font-size: 18px;
-      color: #5a5e66;
+      color: #fff;
       vertical-align: text-bottom;
 
       &.hover-effect {

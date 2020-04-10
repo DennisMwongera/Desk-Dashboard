@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'Q-Desk Admin Dashboard',
 
   /**
    * @type {boolean} true | false

@@ -56,27 +56,215 @@ export const constantRoutes = [
   },
 
   {
-    path: '/example',
+    path: '/Tickets',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    redirect: '/Tickets/Tickets',
+    name: 'Tickets',
+    meta: { title: 'Tickets', icon: 'example' },
     children: [
       {
-        path: 'table',
+        path: 'New Ticket',
         name: 'Table',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: { title: 'New Ticket', icon: 'table' }
       },
       {
-        path: 'tree',
+        path: 'List',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        meta: { title: 'List', icon: 'tree' }
+      },
+      {
+        path: 'Categories',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Castegories', icon: 'tree' }
+      },
+      {
+        path: 'sub-Categories',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Sub-Categories', icon: 'tree' }
+      },
+      {
+        path: 'priorities',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Priority', icon: 'tree' }
+      },
+      {
+        path: 'severities',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Severity', icon: 'tree' }
+      },
+      {
+        path: 'status',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Status', icon: 'tree' }
+      },
+      {
+        path: 'sources',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Sources', icon: 'tree' }
       }
     ]
   },
-
+  {
+    path: '/User',
+    component: Layout,
+    redirect: '/User/user',
+    name: 'User',
+    meta: { title: 'User', icon: 'tree' },
+    children: [
+      {
+        path: 'Create Contact',
+        name: 'Create_Contact',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Create Contact', icon: 'tree' }
+      },
+      {
+        path: 'assign',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Assign', icon: 'tree' }
+      },
+      {
+        path: 'departments',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Departments', icon: 'tree' }
+      },
+      {
+        path: 'roles',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Roles', icon: 'tree' }
+      },
+      {
+        path: 'permissions',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Permissions', icon: 'tree' }
+      } 
+      ]
+  },
+  {
+    path: '/Contacts',
+    component: Layout,
+    redirect: '/Contacts/contacts',
+    name: 'User',
+    meta: { title: 'Contacts', icon: 'tree' },
+    children: [
+      {
+        path: 'Create Contact',
+        name: 'Create_Contact',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Create Contact', icon: 'tree' }
+      },
+      {
+        path: 'List',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'List', icon: 'tree' }
+      }
+    ]
+  },
+  {
+    path: '/SMS',
+    component: Layout,
+    redirect: '/sms/sms',
+    name: 'SMS',
+    meta: { title: 'SMS', icon: 'tree' },
+    children: [
+      {
+        path: 'Reports',
+        name: 'Reports',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Reports', icon: 'tree' }
+      },
+      {
+        path: 'Received',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Received', icon: 'tree' }
+      },
+      {
+        path: 'Scheduled',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Scheduled', icon: 'tree' }
+      },
+      {
+        path: 'Bulk SMS',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Bulk SMS', icon: 'tree' }
+      },
+      {
+        path: 'Templates',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Templates', icon: 'tree' }
+      }
+    ]
+  },
+  {
+    path: '/Mails',
+    component: Layout,
+    redirect: '/mails/mails',
+    name: 'Mails',
+    meta: { title: 'Mails', icon: 'tree' },
+    children: [
+      {
+        path: 'Reports',
+        name: 'Reports',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Reports', icon: 'tree' }
+      },
+      {
+        path: 'Scheduled',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Scheduled', icon: 'tree' }
+      },
+      {
+        path: 'Bulk SMS',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Bulk SMS', icon: 'tree' }
+      },
+      {
+        path: 'Templates',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Templates', icon: 'tree' }
+      }
+    ]
+  },
+  {
+    path: '/FAQs',
+    component: Layout,
+    redirect: '/faqs/faqs',
+    name: 'FAQs',
+    meta: { title: 'FAQs', icon: 'tree' },
+    children: [
+      {
+        path: 'List',
+        name: 'List',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'List', icon: 'tree' }
+      },
+      {
+        path: 'Create FAQs',
+        name: 'Tree',
+        component: () => import('@/views/tree/index'),
+        meta: { title: 'Create', icon: 'tree' }
+      }
+    ]
+  },
   {
     path: '/form',
     component: Layout,
