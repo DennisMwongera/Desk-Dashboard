@@ -1,9 +1,14 @@
 <template>
   <div class="navbar">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+          rel="stylesheet">
 
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+      <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+      <div>
+        <form action="">
+          <input type="text" placeholder="search">
+        </form>
+      </div>
 
     <breadcrumb class="breadcrumb-container" />
 
@@ -71,11 +76,14 @@ export default {
   width: 100%;
   height: 80px;
   overflow: hidden;
-  position: relative;
-  background: #fff;
+  position: fixed;
+  z-index: 99;
+  background: #106A8E;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
+    position: fixed;
+    top: 0;
     line-height: 46px;
     height: 100%;
     float: left;
@@ -83,13 +91,11 @@ export default {
     transition: background .3s;
     -webkit-tap-highlight-color:transparent;
 
-    &:hover {
-      background: rgba(0, 0, 0, .025)
-    }
   }
 
   .breadcrumb-container {
     float: left;
+    position: fixed;
   }
   .container{
     width: 100%;

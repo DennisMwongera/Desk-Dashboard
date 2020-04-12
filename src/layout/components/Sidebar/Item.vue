@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.el-menu{
+  top: 60px;
+}
+</style>

@@ -126,8 +126,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-
 $bg:#106A8E;
 $light_gray:#fff;
 $cursor: #fff;
