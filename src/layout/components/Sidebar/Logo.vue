@@ -24,8 +24,8 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Admin Template',
-      logo: 'Vue'
+      title: 'Q-desk',
+      logo: 'Q'
     }
   }
 }

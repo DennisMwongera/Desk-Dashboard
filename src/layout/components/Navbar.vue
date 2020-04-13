@@ -1,22 +1,19 @@
 <template>
-  <div class="navbar">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+  <div class="navbar absolute">
 
-      <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-      <div>
+    <hamburger  :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <!-- <div>
         <form action="">
-          <input type="text" placeholder="search">
+          <input type="text" placeholder="">
         </form>
-      </div>
+      </div> -->
 
-    <breadcrumb class="breadcrumb-container" />
+    <breadcrumb class="breadcrumb-container  absolute" />
 
-    <div class="right-menu">
+    <div class="right-menu float-right ">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <span class="material-icons">account_circle</span>
-          <!-- <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar"> -->
+         <svg-icon icon-class="user" />
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
@@ -37,10 +34,7 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    <!-- <div class="container">
-      <h3>Welcome</h3>
-    </div> -->
-  </div>
+    </div>
 </template>
 
 <script>
@@ -76,9 +70,9 @@ export default {
   width: 100%;
   height: 80px;
   overflow: hidden;
-  position: fixed;
+  position: relative;
   z-index: 99;
-  background: #106A8E;
+  background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
@@ -95,11 +89,10 @@ export default {
 
   .breadcrumb-container {
     float: left;
-    position: fixed;
-  }
+
+}
   .container{
     width: 100%;
-    position: absolute;
     height: 30px;
     background-color: #106A8E;
   }

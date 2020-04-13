@@ -6,6 +6,9 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
+/*css*/
+import '../assets/css/style.css'
+
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -60,55 +63,55 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/Tickets/Tickets',
     name: 'Tickets',
-    meta: { title: 'Tickets', icon: 'example' },
+    meta: { title: 'Tickets', icon: 'form' },
     children: [
       {
         path: 'New Ticket',
         name: 'Table',
         component: () => import('@/views/table/index'),
-        meta: { title: 'New Ticket', icon: 'table' }
+        meta: { title: 'New Ticket', icon: '' }
       },
       {
         path: 'List',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'List', icon: 'tree' }
+        meta: { title: 'List', icon: '' }
       },
       {
         path: 'Categories',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Castegories', icon: 'tree' }
+        meta: { title: 'Categories', icon: '' }
       },
       {
         path: 'sub-Categories',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Sub-Categories', icon: 'tree' }
+        meta: { title: 'Sub-Categories', icon: '' }
       },
       {
         path: 'priorities',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Priority', icon: 'tree' }
+        meta: { title: 'Priority', icon: '' }
       },
       {
         path: 'severities',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Severity', icon: 'tree' }
+        meta: { title: 'Severity', icon: '' }
       },
       {
         path: 'status',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Status', icon: 'tree' }
+        meta: { title: 'Status', icon: '' }
       },
       {
         path: 'sources',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Sources', icon: 'tree' }
+        meta: { title: 'Sources', icon: '' }
       }
     ]
   },
@@ -117,37 +120,37 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/User/user',
     name: 'User',
-    meta: { title: 'User', icon: 'tree' },
+    meta: { title: 'User', icon: 'user' },
     children: [
       {
         path: 'Create Contact',
         name: 'Create_Contact',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Create Contact', icon: 'tree' }
+        meta: { title: 'Create Contact', icon: '' }
       },
       {
         path: 'assign',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Assign', icon: 'tree' }
+        meta: { title: 'Assign', icon: '' }
       },
       {
         path: 'departments',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Departments', icon: 'tree' }
+        meta: { title: 'Departments', icon: '' }
       },
       {
         path: 'roles',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Roles', icon: 'tree' }
+        meta: { title: 'Roles', icon: '' }
       },
       {
         path: 'permissions',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Permissions', icon: 'tree' }
+        meta: { title: 'Permissions', icon: '' }
       } 
       ]
   },
@@ -156,19 +159,19 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/Contacts/contacts',
     name: 'User',
-    meta: { title: 'Contacts', icon: 'tree' },
+    meta: { title: 'Contacts', icon: 'list' },
     children: [
       {
         path: 'Create Contact',
         name: 'Create_Contact',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Create Contact', icon: 'tree' }
+        meta: { title: 'Create Contact', icon: '' }
       },
       {
         path: 'List',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'List', icon: 'tree' }
+        meta: { title: 'List', icon: '' }
       }
     ]
   },
@@ -177,37 +180,37 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/sms/sms',
     name: 'SMS',
-    meta: { title: 'SMS', icon: 'tree' },
+    meta: { title: 'SMS', icon: 'message' },
     children: [
       {
         path: 'Reports',
         name: 'Reports',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Reports', icon: 'tree' }
+        meta: { title: 'Reports', icon: '' }
       },
       {
         path: 'Received',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Received', icon: 'tree' }
+        meta: { title: 'Received', icon: '' }
       },
       {
         path: 'Scheduled',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Scheduled', icon: 'tree' }
+        meta: { title: 'Scheduled', icon: '' }
       },
       {
         path: 'Bulk SMS',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Bulk SMS', icon: 'tree' }
+        meta: { title: 'Bulk SMS', icon: '' }
       },
       {
         path: 'Templates',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Templates', icon: 'tree' }
+        meta: { title: 'Templates', icon: '' }
       }
     ]
   },
@@ -216,31 +219,31 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/mails/mails',
     name: 'Mails',
-    meta: { title: 'Mails', icon: 'tree' },
+    meta: { title: 'Mails', icon: 'email' },
     children: [
       {
         path: 'Reports',
         name: 'Reports',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Reports', icon: 'tree' }
+        meta: { title: 'Reports', icon: '' }
       },
       {
         path: 'Scheduled',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Scheduled', icon: 'tree' }
+        meta: { title: 'Scheduled', icon: '' }
       },
       {
         path: 'Bulk SMS',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Bulk SMS', icon: 'tree' }
+        meta: { title: 'Bulk SMS', icon: '' }
       },
       {
         path: 'Templates',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Templates', icon: 'tree' }
+        meta: { title: 'Templates', icon: '' }
       }
     ]
   },
@@ -249,19 +252,19 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/faqs/faqs',
     name: 'FAQs',
-    meta: { title: 'FAQs', icon: 'tree' },
+    meta: { title: 'FAQs', icon: 'question' },
     children: [
       {
         path: 'List',
         name: 'List',
         component: () => import('@/views/table/index'),
-        meta: { title: 'List', icon: 'tree' }
+        meta: { title: 'List', icon: '' }
       },
       {
         path: 'Create FAQs',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Create', icon: 'tree' }
+        meta: { title: 'Create', icon: '' }
       }
     ]
   },
