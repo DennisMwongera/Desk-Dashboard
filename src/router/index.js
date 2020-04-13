@@ -159,7 +159,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/Contacts/contacts',
     name: 'User',
-    meta: { title: 'Contacts', icon: 'list' },
+    meta: { title: 'Contacts', icon: ' nested' },
     children: [
       {
         path: 'Create Contact',
@@ -219,7 +219,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/mails/mails',
     name: 'Mails',
-    meta: { title: 'Mails', icon: 'email' },
+    meta: { title: 'Mails', icon: 'message' },
     children: [
       {
         path: 'Reports',
@@ -252,7 +252,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/faqs/faqs',
     name: 'FAQs',
-    meta: { title: 'FAQs', icon: 'question' },
+    meta: { title: 'FAQs', icon: 'form' },
     children: [
       {
         path: 'List',

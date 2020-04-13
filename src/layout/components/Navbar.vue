@@ -2,21 +2,26 @@
   <div class="navbar">
       
     <hamburger  :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-       <form action="" class="w-full grid grid-cols-2 p-12 bg-gray-400  px-4 py-12">
-         <select id="cars" class=" absolute z-9 px-6 py-2 fixed rounded-md text-gray-600">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-             <option value="audi">Audi</option>
+    <div class="w-full grid grid-cols-2 p-12 bg-gray-400  px-4 py-8">
+         <div class="select_menu mt-2">
+         <select id="cars" class="z-9 px-8 py-3 rounded-md text-gray-600">
+            <option value="volvo">All</option>
+            <option value="saab">Menu 1</option>
+            <option value="opel">Menu 2</option>
+             <option value="audi">Menu 3</option>
         </select>
-          <input type="text" placeholder="Search" class=" ml-32 px-6 py-2 fixed rounded-md text-gray-600">
-        </form>
+         </div>
+         <div class="search_input fixed ml-48 mt-2">
+          <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md text-gray-600">
+          </div>
+       
+        </div>
     <!-- <div class="container bg-green-900 absolute"></div> -->
-    <breadcrumb class="breadcrumb-container mt-0 fixed" />
+    <breadcrumb class="breadcrumb-container mt-24  " />
 
-    <div class="right-menu float-right ">
+    <div class="right-menu float-right">
       <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper fixed z-999 mt-0">
+        <div class="avatar-wrapper z-999 mt-0">
          <svg-icon icon-class="user" class="fill-current" />
           <i class="el-icon-caret-bottom" />
         </div>
@@ -75,9 +80,9 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   width: 100%;
-  height: 170px;
+  height: 150px;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   z-index: 99;
   background-color: #106A8E;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
@@ -95,7 +100,7 @@ export default {
   }
 
   .breadcrumb-container {
-    top: 150px;
+    top: 200px;
     float: left;
 
 }
