@@ -1,19 +1,23 @@
 <template>
-  <div class="navbar absolute">
-
+  <div class="navbar">
+      
     <hamburger  :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-    <!-- <div>
-        <form action="">
-          <input type="text" placeholder="">
+       <form action="" class="w-full grid grid-cols-2 p-12 bg-gray-400  px-4 py-12">
+         <select id="cars" class=" absolute z-9 px-6 py-2 fixed rounded-md text-gray-600">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+             <option value="audi">Audi</option>
+        </select>
+          <input type="text" placeholder="Search" class=" ml-32 px-6 py-2 fixed rounded-md text-gray-600">
         </form>
-      </div> -->
-
-    <breadcrumb class="breadcrumb-container  absolute" />
+    <!-- <div class="container bg-green-900 absolute"></div> -->
+    <breadcrumb class="breadcrumb-container mt-0 fixed" />
 
     <div class="right-menu float-right ">
       <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper">
-         <svg-icon icon-class="user" />
+        <div class="avatar-wrapper fixed z-999 mt-0">
+         <svg-icon icon-class="user" class="fill-current" />
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
@@ -33,6 +37,7 @@
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
+         <el-form-item class="float-right mt-0 b" />
     </div>
     </div>
 </template>
@@ -41,11 +46,13 @@
 import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
+import Timerange from '@/components/Timerange'
 
 export default {
   components: {
     Breadcrumb,
-    Hamburger
+    Hamburger,
+    Timerange
   },
   computed: {
     ...mapGetters([
@@ -68,11 +75,11 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   width: 100%;
-  height: 80px;
+  height: 170px;
   overflow: hidden;
   position: relative;
   z-index: 99;
-  background: #fff;
+  background-color: #106A8E;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
@@ -88,6 +95,7 @@ export default {
   }
 
   .breadcrumb-container {
+    top: 150px;
     float: left;
 
 }
@@ -98,6 +106,7 @@ export default {
   }
 
   .right-menu {
+    margin-top: 0;
     float: right;
     height: 100%;
     line-height: 50px;
