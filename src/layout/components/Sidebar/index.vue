@@ -1,7 +1,7 @@
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
-      <div class="fixed text-2xl text-white text-left p-6">
+      <div class=" title fixed text-2xl text-white text-left p-6">
       <h1>Product Q-Desk</h1>
     </div>
     <el-scrollbar wrap-class="scrollbar-wrapper">

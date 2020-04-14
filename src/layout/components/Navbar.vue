@@ -91,7 +91,6 @@ export default {
     position: fixed;
     top: 0;
     line-height: 46px;
-    height: 100%;
     float: left;
     cursor: pointer;
     transition: background .3s;
