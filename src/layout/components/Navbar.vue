@@ -18,27 +18,32 @@
           <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md bg-gray-600 text-gray-700">
         </div>
         <div class="right-menu">
-          <el-dropdown class="avatar-container" trigger="click">
-            <div class="avatar-wrapper mt-0 inline">
-              <span class="material-icons">account_circle</span> <i class="el-icon-caret-bottom" />
-            </div>
-            <el-dropdown-menu slot="dropdown" class="user-dropdown">
-              <router-link to="/">
-                <el-dropdown-item>
-                  Home
+          <div>
+            <el-dropdown class="avatar-container float-right p-1" trigger="click">
+              <div class="avatar-wrapper mt-0 inline-flex">
+                <span class="material-icons float-right">account_circle</span> <i class="el-icon-caret-bottom mt-2" />
+              </div>
+              <el-dropdown-menu slot="dropdown" class="user-dropdown">
+                <router-link to="/">
+                  <el-dropdown-item>
+                    Profile
+                  </el-dropdown-item>
+                </router-link>
+                <a target="_blank" href="#">
+                  <el-dropdown-item>Account</el-dropdown-item>
+                </a>
+                <a target="_blank" href="#">
+                  <el-dropdown-item>Docs</el-dropdown-item>
+                </a>
+                <el-dropdown-item divided @click.native="logout">
+                  <span style="display:block;">Log Out</span>
                 </el-dropdown-item>
-              </router-link>
-              <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
-                <el-dropdown-item>Github</el-dropdown-item>
-              </a>
-              <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-                <el-dropdown-item>Docs</el-dropdown-item>
-              </a>
-              <el-dropdown-item divided @click.native="logout">
-                <span style="display:block;">Log Out</span>
-              </el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+          <div class="nav_menu ml-64">
+            <span class="material-icons avatar-container avatar-wrapper float-right p-2 text-gray-800">notifications</span>
+          </div>
           <el-form-item class="float-right mt-0 b" />
         </div>
       </div>
@@ -97,7 +102,7 @@ export default {
   }
 
   .right-menu {
-    padding-left: 30px;
+    // padding-left: 30px;
     justify-content: end;
     margin-top: 0;
     height: 100%;
@@ -108,8 +113,7 @@ export default {
     }
 
     .right-menu-item {
-      display: inline-block;
-      padding: 0 8px;
+      display: inline-flex;
       height: 100%;
       font-size: 18px;
       color: #fff;
@@ -126,13 +130,11 @@ export default {
     }
 
     .avatar-container {
-      position: absolute;
       margin-right: 5px;
       float: right;
 
       .avatar-wrapper {
         margin-top: 5px;
-        padding-left: 600px;
         position: relative;
 
         .user-avatar {

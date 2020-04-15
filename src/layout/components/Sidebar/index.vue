@@ -1,9 +1,7 @@
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" label="Q-DESK" />
-    <div class="logo_title text-white absolute z-9">
-      <h1>Q-DESK</h1>
-    </div>
+    <h1 class="p-4 text-white absolute z-9">Q-DESK</h1>
     <hamburger :is-active="sidebar.opened" class="hamburger-container relative z-99 mt-5  py-6 text-white" @toggleClick="toggleSideBar" />
     <el-scrollbar wrap-class="scrollbar-wrapper" class="overflow-x-hidden">
       <el-menu
