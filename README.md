@@ -1,14 +1,15 @@
-# vue-admin-template
+##Desk-Dashboard
 
 ## Build Setup
-
+Git Bash
+Vscode Terminal
 
 ```bash
 # clone the project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
+https://github.com/DennisMwongera/Desk-Dashboard.git
 
 # enter the project directory
-cd vue-admin-template
+cd Desk-Dashboard
 
 # install dependency
 npm install
@@ -45,11 +46,11 @@ npm run lint
 npm run lint -- --fix
 ```
 
-Refer to [Documentation](https://panjiachen.github.io/vue-element-admin-site/guide/essentials/deploy.html) for more information
+
 
 ## Demo
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+
 
 ## Extra
 
