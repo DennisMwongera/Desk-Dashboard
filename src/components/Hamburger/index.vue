@@ -2,7 +2,7 @@
   <div style="padding: 0 15px;" @click="toggleClick">
     <svg
       :class="{'is-active':isActive}"
-      class="hamburger"
+      class="hamburger fill-current cursor-pointer mt-4 lg:ml-0 md:ml-6 "
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       width="64"

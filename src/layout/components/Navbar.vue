@@ -1,63 +1,56 @@
 <template>
-  <div class="navbar">
-      
-    <hamburger  :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-    <div class="w-full grid grid-cols-2 p-12 bg-gray-400  px-4 py-8">
-         <div class="select_menu mt-2">
-         <select id="cars" class="z-9 px-8 py-3 rounded-md text-gray-600">
+  <html>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    >
+    <div class="navbar">
+      <div class="w-full grid grid-cols-3 p-12 bg-gray-400  px-4 py-8">
+        <div class="select_menu mt-2">
+          <select id="cars" class="z-9 px-8 py-3 rounded-md text-gray-600">
             <option value="volvo">All</option>
             <option value="saab">Menu 1</option>
             <option value="opel">Menu 2</option>
-             <option value="audi">Menu 3</option>
-        </select>
-         </div>
-         <div class="search_input fixed ml-48 mt-2">
+            <option value="audi">Menu 3</option>
+          </select>
+        </div>
+        <div class="search_input fixed ml-48 mt-2">
           <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md text-gray-600">
-          </div>
-       
         </div>
-    <!-- <div class="container bg-green-900 absolute"></div> -->
-    <breadcrumb class="breadcrumb-container mt-24  " />
-
-    <div class="right-menu float-right">
-      <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper z-999 mt-0">
-         <svg-icon icon-class="user" class="fill-current" />
-          <i class="el-icon-caret-bottom" />
+        <div class="right-menu">
+          <el-dropdown class="avatar-container" trigger="click">
+            <div class="avatar-wrapper mt-0 inline">
+              <span class="material-icons">account_circle</span> <i class="el-icon-caret-bottom" />
+            </div>
+            <el-dropdown-menu slot="dropdown" class="user-dropdown">
+              <router-link to="/">
+                <el-dropdown-item>
+                  Home
+                </el-dropdown-item>
+              </router-link>
+              <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
+                <el-dropdown-item>Github</el-dropdown-item>
+              </a>
+              <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
+                <el-dropdown-item>Docs</el-dropdown-item>
+              </a>
+              <el-dropdown-item divided @click.native="logout">
+                <span style="display:block;">Log Out</span>
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+          <el-form-item class="float-right mt-0 b" />
         </div>
-        <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <router-link to="/">
-            <el-dropdown-item>
-              Home
-            </el-dropdown-item>
-          </router-link>
-          <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
-            <el-dropdown-item>Github</el-dropdown-item>
-          </a>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-            <el-dropdown-item>Docs</el-dropdown-item>
-          </a>
-          <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">Log Out</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-         <el-form-item class="float-right mt-0 b" />
+      </div>
     </div>
-    </div>
+  </html>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
-import Timerange from '@/components/Timerange'
-
 export default {
   components: {
-    Breadcrumb,
-    Hamburger,
-    Timerange
+
   },
   computed: {
     ...mapGetters([
@@ -97,12 +90,6 @@ export default {
     -webkit-tap-highlight-color:transparent;
 
   }
-
-  .breadcrumb-container {
-    top: 200px;
-    float: left;
-
-}
   .container{
     width: 100%;
     height: 30px;
@@ -110,8 +97,9 @@ export default {
   }
 
   .right-menu {
+    padding-left: 30px;
+    justify-content: end;
     margin-top: 0;
-    float: right;
     height: 100%;
     line-height: 50px;
 
@@ -138,7 +126,8 @@ export default {
     }
 
     .avatar-container {
-      margin-right: 30px;
+      margin-right: 5px;
+      float: right;
 
       .avatar-wrapper {
         margin-top: 5px;
@@ -155,7 +144,7 @@ export default {
           cursor: pointer;
           position: absolute;
           right: -20px;
-          top: 25px;
+          top: 5px;
           font-size: 12px;
         }
       }

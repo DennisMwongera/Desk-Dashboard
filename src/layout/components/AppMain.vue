@@ -2,13 +2,18 @@
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
       <router-view :key="key" />
+      <breadcrumb class="breadcrumb-container absolute mt-48 float-left" />
     </transition>
   </section>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb/index.vue'
 export default {
   name: 'AppMain',
+  components: {
+    Breadcrumb
+  },
   computed: {
     key() {
       return this.$route.path

@@ -85,16 +85,16 @@ export default {
           padding: [4, 8]
         },
         yAxis: {
-               data: ['1-1000','1000-3000','3000-5000','5000-8000','8000-10,000','10,000+'],
+          data: ['1-1000', '1000-3000', '3000-5000', '5000-8000', '8000-10,000', '10,000+'],
           axisTick: {
             show: false
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['inquiry', 'complaint', 'request']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: 'inquiry', itemStyle: {
             normal: {
               color: '#106A8E',
               lineStyle: {
@@ -105,12 +105,28 @@ export default {
           },
           smooth: true,
           type: 'line',
-          data: ['1000','3000','6000','4000', '5000', '4000'],
+          data: ['1000', '3000', '6000', '4000', '5000', '4000'],
           animationDuration: 2800,
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: 'complaint', itemStyle: {
+            normal: {
+              color: '#106A8E',
+              lineStyle: {
+                color: '#106A8E',
+                width: 9
+              }
+            }
+          },
+          smooth: true,
+          type: 'line',
+          data: ['1000', '3000', '6000', '4000', '5000', '4000'],
+          animationDuration: 2800,
+          animationEasing: 'cubicInOut'
+        },
+        {
+          name: 'request',
           smooth: true,
           type: 'line',
           itemStyle: {
