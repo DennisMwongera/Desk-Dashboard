@@ -54,6 +54,7 @@
     }
 
     .svg-icon {
+      font-size: 20px;
       margin-right: 24px;
       display: inline-flex;
     }
@@ -90,11 +91,12 @@
 
   .hideSidebar {
     .sidebar-container {
-      width: 54px !important;
+      width: 80px !important;
+      overflow: hidden;
     }
 
     .main-container {
-      margin-left: 54px;
+      margin-left: 80px!important;
     }
 
     .submenu-title-noDropdown {
@@ -105,6 +107,7 @@
         padding: 0 !important;
 
         .svg-icon {
+          font-size: 24px;
           margin-left: 20px;
         }
       }
@@ -121,7 +124,11 @@
         }
 
         .el-submenu__icon-arrow {
+          color: white!important;
           display: none;
+          .svg-icon{
+            color: white;
+          }
         }
       }
     }
@@ -178,6 +185,8 @@
 .el-menu--vertical {
   &>.el-menu {
     .svg-icon {
+      color: white;
+      font-size: 40px;
       margin-right: 16px;
     }
   }

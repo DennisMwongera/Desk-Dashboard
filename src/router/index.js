@@ -6,7 +6,7 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
-/*css*/
+/* css*/
 import '../assets/css/style.css'
 
 /**
@@ -63,7 +63,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/Tickets/Tickets',
     name: 'Tickets',
-    meta: { title: 'Tickets', icon: 'form' },
+    meta: { title: 'Tickets', icon: 'ticket' },
     children: [
       {
         path: 'New Ticket',
@@ -151,15 +151,15 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Permissions', icon: '' }
-      } 
-      ]
+      }
+    ]
   },
   {
     path: '/Contacts',
     component: Layout,
     redirect: '/Contacts/contacts',
     name: 'User',
-    meta: { title: 'Contacts', icon: ' nested' },
+    meta: { title: 'Contacts', icon: 'phone-call' },
     children: [
       {
         path: 'Create Contact',
@@ -219,7 +219,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/mails/mails',
     name: 'Mails',
-    meta: { title: 'Mails', icon: 'message' },
+    meta: { title: 'Mails', icon: 'email' },
     children: [
       {
         path: 'Reports',
@@ -252,7 +252,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/faqs/faqs',
     name: 'FAQs',
-    meta: { title: 'FAQs', icon: 'form' },
+    meta: { title: 'FAQs', icon: 'faqs' },
     children: [
       {
         path: 'List',

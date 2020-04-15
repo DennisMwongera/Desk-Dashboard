@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container mt-100px">
+  <div class="app-container mt-40">
     <el-table
       v-loading="listLoading"
       :data="list"

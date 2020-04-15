@@ -1,7 +1,7 @@
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" label="Q-DESK" />
-    <div class="logo_title text-white relative">
+    <div class="logo_title text-white absolute z-9">
       <h1>Q-DESK</h1>
     </div>
     <hamburger :is-active="sidebar.opened" class="hamburger-container relative z-99 mt-5  py-6 text-white" @toggleClick="toggleSideBar" />

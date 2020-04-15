@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" class="bg-white rounded-md w-1/2" />
+  <div :class="className" :style="{height:height,width:width}" class="bg-white rounded-md" />
 </template>
 
 <script>

@@ -7,15 +7,15 @@
     <div class="navbar">
       <div class="w-full grid grid-cols-3 p-12 bg-gray-400  px-4 py-8">
         <div class="select_menu mt-2">
-          <select id="cars" class="z-9 px-8 py-3 rounded-md text-gray-600">
+          <select id="cars" class="z-9 px-10 py-3 rounded-md bg-gray-600 text-gray-700">
             <option value="volvo">All</option>
             <option value="saab">Menu 1</option>
             <option value="opel">Menu 2</option>
             <option value="audi">Menu 3</option>
           </select>
         </div>
-        <div class="search_input fixed ml-48 mt-2">
-          <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md text-gray-600">
+        <div class="search_input fixed ml-40 mt-2">
+          <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md bg-gray-600 text-gray-700">
         </div>
         <div class="right-menu">
           <el-dropdown class="avatar-container" trigger="click">
@@ -126,11 +126,13 @@ export default {
     }
 
     .avatar-container {
+      position: absolute;
       margin-right: 5px;
       float: right;
 
       .avatar-wrapper {
         margin-top: 5px;
+        padding-left: 600px;
         position: relative;
 
         .user-avatar {
