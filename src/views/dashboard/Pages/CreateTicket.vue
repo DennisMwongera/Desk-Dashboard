@@ -1,13 +1,15 @@
 <template>
   <div class="app-container mt-40">
     <el-form ref="form" :model="form" label-width="120px">
-      <el-form-item label="Activity name">
+      <el-form-item label="Customer Name">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Activity zone">
-        <el-select v-model="form.region" placeholder="please select your zone">
-          <el-option label="Zone one" value="shanghai" />
-          <el-option label="Zone two" value="beijing" />
+      <el-form-item label="Ticket Source">
+        <el-select v-model="form.region" placeholder="Ticket Source">
+          <el-option label="Call" value="Call" />
+          <el-option label="Email" value="Email" />
+          <el-option label="Text Message" value="Message" />
+          <el-option label="Social Media" value="Media" />
         </el-select>
       </el-form-item>
       <el-form-item label="Activity time">
@@ -49,6 +51,7 @@
 
 <script>
 export default {
+  name: 'CreateTicket',
   data() {
     return {
       form: {

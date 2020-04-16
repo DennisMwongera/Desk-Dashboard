@@ -10,17 +10,17 @@
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column>
-     <el-table-column label="Closed" width="100" align="center">
+    <el-table-column label="Closed" width="100" align="center">
       <template slot-scope="scope">
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column>
-     <el-table-column label="Open " width="100" align="center">
+    <el-table-column label="Open " width="100" align="center">
       <template slot-scope="scope">
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column>
-     <el-table-column label="Critical" width="100" align="center">
+    <el-table-column label="Critical" width="100" align="center">
       <template slot-scope="scope">
         ¥{{ scope.row.price | toThousandFilter }}
       </template>

@@ -1,8 +1,8 @@
 <template>
   <div :class="{'has-logo':showLogo}">
-    <logo v-if="showLogo" :collapse="isCollapse" label="Q-DESK" />
-    <h1 class="p-4 text-white absolute z-9">Q-DESK</h1>
+    <!-- <logo v-if="showLogo" :collapse="isCollapse" label="Q-DESK" /> -->
     <hamburger :is-active="sidebar.opened" class="hamburger-container relative z-99 mt-5  py-6 text-white" @toggleClick="toggleSideBar" />
+    <SidebarLogo class="fixed" />
     <el-scrollbar wrap-class="scrollbar-wrapper" class="overflow-x-hidden">
       <el-menu
         :default-active="activeMenu"
@@ -23,13 +23,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Logo from './Logo'
+// import Logo from './Logo'
+import SidebarLogo from './SidebarLogo.vue'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 import Hamburger from '@/components/Hamburger/index.vue'
 
 export default {
-  components: { SidebarItem, Logo, Hamburger },
+  components: { SidebarItem, Hamburger, SidebarLogo },
   computed: {
     ...mapGetters([
       'sidebar'

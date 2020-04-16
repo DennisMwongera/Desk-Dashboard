@@ -16,12 +16,13 @@
         </div>
         <div class="search_input fixed ml-40 mt-2">
           <input type="text" placeholder="Search" class=" px-6 py-3 rounded-md bg-gray-600 text-gray-700">
+          <span class="material-icons inline-flex float-right">search</span>
         </div>
         <div class="right-menu">
-          <div>
+          <div class="avatar lg:ml-64">
             <el-dropdown class="avatar-container float-right p-1" trigger="click">
               <div class="avatar-wrapper mt-0 inline-flex">
-                <span class="material-icons float-right">account_circle</span> <i class="el-icon-caret-bottom mt-2" />
+                <span class="material-icons inline-flex float-right">account_circle</span><i class="el-icon-caret-bottom mt-2" />
               </div>
               <el-dropdown-menu slot="dropdown" class="user-dropdown">
                 <router-link to="/">
@@ -41,7 +42,10 @@
               </el-dropdown-menu>
             </el-dropdown>
           </div>
-          <div class="nav_menu ml-64">
+          <div class="nav_menu lg:ml-48">
+            <span class="material-icons avatar-container avatar-wrapper float-right p-2 text-gray-800">help</span>
+          </div>
+          <div class="nav_menu lg:ml-56">
             <span class="material-icons avatar-container avatar-wrapper float-right p-2 text-gray-800">notifications</span>
           </div>
           <el-form-item class="float-right mt-0 b" />
@@ -102,7 +106,7 @@ export default {
   }
 
   .right-menu {
-    // padding-left: 30px;
+    margin-left: 450px;
     justify-content: end;
     margin-top: 0;
     height: 100%;
@@ -134,6 +138,7 @@ export default {
       float: right;
 
       .avatar-wrapper {
+         margin-left: 500px;
         margin-top: 5px;
         position: relative;
 

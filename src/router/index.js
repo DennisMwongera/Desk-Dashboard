@@ -66,7 +66,7 @@ export const constantRoutes = [
     meta: { title: 'Tickets', icon: 'ticket' },
     children: [
       {
-        path: 'New Ticket',
+        path: 'NewTicket',
         name: 'Table',
         component: () => import('@/views/table/index'),
         meta: { title: 'New Ticket', icon: '' }
